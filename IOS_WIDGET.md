@@ -48,7 +48,7 @@ async function createWidget() {
     const img = await req.loadImage();
 
     const widgetImage = widget.addImage(img);
-    widgetImage.imageSize = new Size(1200, 600);
+    widgetImage.resizable = true;
     widgetImage.centerAlignImage();
     widgetImage.applyFittingContentMode();
   } catch (error) {

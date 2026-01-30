@@ -53,7 +53,7 @@ export function BoardCanvas() {
             const result = await editorInstance.toImage(allShapeIds, {
               format: "png",
               background: true,
-              scale: 2,
+              scale: 1,
               padding: 64,
             });
             snapshotBlob = result.blob;
