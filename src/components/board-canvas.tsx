@@ -219,7 +219,10 @@ export function BoardCanvas() {
 
       {/* Canvas */}
       <div className="relative flex-1">
-        <Tldraw onMount={handleMount} />
+        <Tldraw
+          licenseKey={process.env.NEXT_PUBLIC_TLDRAW_LICENSE_KEY}
+          onMount={handleMount}
+        />
       </div>
     </div>
   );
