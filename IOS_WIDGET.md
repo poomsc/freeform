@@ -48,9 +48,9 @@ async function createWidget() {
     const img = await req.loadImage();
 
     const widgetImage = widget.addImage(img);
-    widgetImage.imageSize = new Size(400, 400);
+    widgetImage.imageSize = new Size(1200, 600);
     widgetImage.centerAlignImage();
-    widgetImage.applyFillingContentMode();
+    widgetImage.applyFittingContentMode();
   } catch (error) {
     const errorText = widget.addText("Failed to load board");
     errorText.textColor = new Color("#ff0000");
@@ -67,7 +67,7 @@ if (config.runsInWidget) {
   Script.setWidget(widget);
 } else {
   // Preview in app
-  await widget.presentLarge();
+  await widget.presentExtraLarge();
 }
 
 Script.complete();
@@ -90,7 +90,7 @@ Tap the **Play** button in Scriptable to run the script. You should see a previe
 
 1. Long-press on your home screen → tap **+** (top-left)
 2. Search for **Scriptable**
-3. Choose the **Large** widget size (for best canvas view)
+3. Choose the **Extra Large** widget size (iPad) for best canvas view
 4. Tap **Add Widget**
 5. Long-press the widget → **Edit Widget**
 6. Set **Script** to **"Freeform Board"**
